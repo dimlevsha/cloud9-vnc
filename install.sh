@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get install supervisor xvfb fluxbox x11vnc websockify
 
 #Copy supervisord configuration to proper configuration directory
-cp supervisord.conf ${HOME}/.config/supervisord.conf
+cp supervisord.conf /etc/supervisor/supervisord.conf 
 
 #Create the proper directory for the script
 sudo mkdir /opt/c9vnc
