@@ -12,7 +12,7 @@ Installation
 Clone the repository to where you'd like (in the example I use the home folder ~)
     
     cd ~
-    git clone https://github.com/acabey/cloud9-vnc.git
+    git clone https://github.com/dimlevsha/cloud9-vnc.git
 
 
 Enter the repository sub-directory
