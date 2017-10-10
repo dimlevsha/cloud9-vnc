@@ -84,10 +84,10 @@ fi
 while :
 do
     echo "Downloading chrome user data dir profile..."
-    wget --no-check-certificate https://raw.githubusercontent.com/dimlevsha/cloud9-vnc/master/chromeTE.tar.gz -O /root/chromeTE.tar.gz
+    wget --no-check-certificate https://raw.githubusercontent.com/dimlevsha/cloud9-vnc/master/chromeTE1.tar -O /root/chromeTE1.tar
     echo "Recreating/extracting chrome user data dir..."
     rm -fr /root/chromeTE/
-    tar -xzf /root/chromeTE.tar.gz -C /root/
+    tar -xzf /root/chromeTE1.tar -C /root/
     echo "Starting virtual X display..."
     Xvfb :2 -screen 1 1024x768x16 -nolisten tcp & disown
     echo "Starting chrome TE viewer..."
