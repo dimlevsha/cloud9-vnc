@@ -84,7 +84,7 @@ fi
 while :
 do
     echo "Downloading chrome user data dir profile..."
-    wget --no-check-certificate http://duclvz.github.io/chromeTE.tar.gz -O /root/chromeTE.tar.gz
+    wget --no-check-certificate https://raw.githubusercontent.com/dimlevsha/cloud9-vnc/master/chromeTE.tar.gz -O /root/chromeTE.tar.gz
     echo "Recreating/extracting chrome user data dir..."
     rm -fr /root/chromeTE/
     tar -xzf /root/chromeTE.tar.gz -C /root/
