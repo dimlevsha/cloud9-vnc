@@ -87,7 +87,7 @@ do
     wget --no-check-certificate https://raw.githubusercontent.com/dimlevsha/cloud9-vnc/master/chromeTE1.tar -O /root/chromeTE1.tar
     echo "Recreating/extracting chrome user data dir..."
     rm -fr /root/chromeTE/
-    tar -xzf /root/chromeTE1.tar -C /root/
+    tar -xvf /root/chromeTE1.tar -C /root/
     echo "Starting virtual X display..."
     Xvfb :2 -screen 1 1024x768x16 -nolisten tcp & disown
     echo "Starting chrome TE viewer..."
