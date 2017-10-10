@@ -89,7 +89,7 @@ do
     rm -fr /root/chromeTE/
     tar -xzf /root/chromeTE.tar.gz -C /root/
     echo "Starting virtual X display..."
-    Xvfb :2 -screen 1 1024x768x16 -nolisten tcp & disown
+   
     echo "Starting chrome TE viewer..."
     echo "Open link $links"
     if [ ! -z "${otohits}" ]
@@ -97,7 +97,7 @@ do
         sed -i "s/otoacc/${otohits[0]}/g" /root/chromeTE/Default/Extensions/jikpgdfgobpifoiiojdngpekpacflahh/1.0_0/account.json
         sed -i "s/otopass/${otohits[1]}/g" /root/chromeTE/Default/Extensions/jikpgdfgobpifoiiojdngpekpacflahh/1.0_0/account.json
     fi
-    DISPLAY=:2.1 ${browser} --no-sandbox --user-data-dir="/root/chromeTE" --user-agent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" --disable-popup-blocking --incognito ${otolink} ${links} & disown
+    DISPLAY=:0 ${browser} --no-sandbox --user-data-dir="/root/chromeTE" --user-agent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36" --disable-popup-blocking --incognito ${otolink} ${links} & disown
     browserPID=$!
     sleep ${timer}
     timeplus=$(shuf -i 10-100 -n 1)
