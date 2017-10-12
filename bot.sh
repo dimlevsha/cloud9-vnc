@@ -98,7 +98,7 @@ do
         sed -i "s/otoacc/${otohits[0]}/g" /root/chromeTE/Default/Extensions/jikpgdfgobpifoiiojdngpekpacflahh/1.0_0/account.json
         sed -i "s/otopass/${otohits[1]}/g" /root/chromeTE/Default/Extensions/jikpgdfgobpifoiiojdngpekpacflahh/1.0_0/account.json
     fi
-    DISPLAY=:2.1 ${browser} --no-sandbox --disable-popup-blocking --allow-running-insecure-content ${otolink} ${links} & disown
+    DISPLAY=:2.1 ${browser}  ${otolink} ${links} & disown
     browserPID=$!
     sleep ${timer}
     timeplus=$(shuf -i 10-100 -n 1)
