@@ -50,6 +50,7 @@ apt-get install -y xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-base xfo
 apt-get install -y gtk2-engines-pixbuf libexif12 libxpm4 libxrender1 libgtk2.0-0
 apt-get install -y libnss3 libgconf-2-4
 apt-get install -y libxss1 libappindicator1 libindicator7
+sudo apt-get install scrot
 if $google
 then
     ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
